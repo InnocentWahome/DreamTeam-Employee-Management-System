@@ -1,0 +1,21 @@
+<!-- app/templates/admin/departments/departments.html -->
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}Departments{% endblock %}
+{% block body %}
+<div class="content-section">
+  <div class="center">
+    {% if add_department %}
+    <h1>Add Department</h1>
+    {% else %}
+    <h1>Edit Department</h1>
+    {% endif %}
+    <br />
+    {{ wtf.quick_form(form) }}
+  </div>
+  <br />
+  {{ utils.flashed_messages() }}
+</div>
+</div>
+{% endblock %}
